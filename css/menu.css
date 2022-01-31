@@ -1,0 +1,48 @@
+#header-bloc-droite {
+    justify-content: end;
+}
+
+#header-bloc-droite > a:nth-child(2) > img:nth-child(1) {
+    display: block;
+    height: 69px;
+}
+
+#header-bloc-gauche > a:nth-child(1) > img:nth-child(1) {
+    display: block;
+    height: 69px;
+}
+
+.header-bloc {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+body{
+    margin: 0px;
+}
+
+h2{
+    margin: 0px;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+img {
+    height: 69px;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
