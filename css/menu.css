@@ -1,0 +1,9 @@
+.infobulle {
+    position: relative;
+    cursor: help;
+  }
+
+  .infobulle:hover::after,
+  .infobulle:focus::after {
+    content: attr(aria-label);
+  }
