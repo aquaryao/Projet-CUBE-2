@@ -1,18 +1,24 @@
 <?php
     function connect(){
-        $db = new PDO('mysql:host=localhost;dbname=annuaire;charset=utf8','root','root');
+        $db = new PDO('mysql:host=localhost;dbname=base;charset=utf8','root','root');
         return $db;
     }
 
     function insert($exemple){
         $db = connect();
-        $sql = "INSERT INTO `exemple` (`exemple`) VALUES ('$exemple')";            
+        $sql = "INSERT INTO `base` (`exemple`) VALUES ('$exemple')";            
         $db->exec($sql);
     }
 
-    function modify($exemple){
+    function update($exemple){
         $db = connect();
-        $sql = "UPDATE `exemple` SET `exemple`='$exemple' WHERE `exemple` = '$exemple'";
+        $sql = "UPDATE `base` SET `exemple` = '$exemple' WHERE `exemple` = '$exemple'";
         $db->exec($sql);
+    }
+
+    function select($exemple){
+        $db = connect();
+        $sql = "SELECT 'exemple' FROM `base`";
+        $db->query($sql);
     }
 ?>

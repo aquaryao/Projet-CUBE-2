@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../css/menu.css">
 </head>
 <body>
-    <?php require_once("php/menu.php")?>
-    <script src="../js/main.js"></script>
+    <?php require_once("../php/menu.php")?>
+    <script src="../js/menu.js"></script>
 </body>
 </html>

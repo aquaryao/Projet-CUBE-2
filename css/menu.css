@@ -2,6 +2,10 @@
     display: none;
 }
 
+#recherche{
+    text-align: right;
+}
+
 #grid > p:nth-child(3) {
     text-align: center;
 }   
@@ -11,8 +15,14 @@
     align-items: center;
 }
 
-.header-bloc-gauche{
+.header-bloc-gauche {
     width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.header-bloc-gauche p{
+    padding: 0px 1vw;
 }
 
 .menu-side{
@@ -54,9 +64,13 @@ nav {
 @media (max-width : 750px) {
     #grid{
         display: grid;
-        grid-template-columns: repeat(3,1fr);
+        width: 100%;
+        grid-template-columns: 20% 60% 20%;
     }
     .header-bloc-droite{
+        display: none;
+    }
+    .header-bloc-gauche > p{
         display: none;
     }
     header img  {
