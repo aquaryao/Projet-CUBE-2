@@ -5,7 +5,7 @@ let header = document.getElementsByTagName("header");
 let phone = document.getElementsByClassName('phone');
 let grid = document.getElementById('grid');
 let menu_side = document.getElementsByClassName('phone');
-let droite = document.querySelector("header > div:nth-child(2)");
+let bloc_droite = document.querySelector("header > div:nth-child(2)");
 let bouton = document.getElementById("bouton");
 bouton.addEventListener("click", affichermenu);
 let fermer = document.getElementById('close');
@@ -13,7 +13,7 @@ fermer.addEventListener('click',cachermenu);
 
 function affichermenu() {
     console.log("Afficher");
-    droite.classList.remove('header-bloc-droite');
+    bloc_droite.classList.remove('header-bloc-droite');
     for(let j = menu_side.length - 1 ; j > -1 ; j--){
         menu_side[j].classList.remove("menu-side");
     }
@@ -29,7 +29,7 @@ function affichermenu() {
 
 function cachermenu() {
     console.log("Cacher");
-    droite.classList.add('header-bloc-droite');
+    bloc_droite.classList.add('header-bloc-droite');
     for(let j = menu_side.length - 1 ; j > -1 ; j--){
         menu_side[j].classList.add("menu-side");
     }

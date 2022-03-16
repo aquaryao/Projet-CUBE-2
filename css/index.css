@@ -1,0 +1,39 @@
+#carroussel{
+    display: flex;
+}
+
+#liste{
+    display: flex;
+    justify-content: center;
+    gap: 5vw;
+    flex-wrap: wrap;
+}
+
+#liste > div {
+    background-color: brown;
+    height: 150px;
+    width: 150px;
+    padding: 2%;
+}
+
+#liste-jeux{
+    margin-right: 10vw;
+    margin-left: 10vw;
+}
+
+.img-centre{
+    max-width: 60vw;
+    display: block;
+    max-height: 90vh;
+    position: relative;
+    z-index: 1;
+}
+
+.img-cote{
+    width: 100vw;
+    background-image: url(../img/2.png);
+}
+
+section{
+    margin: 5vh 0px;
+}
