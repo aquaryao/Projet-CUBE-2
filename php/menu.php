@@ -1,3 +1,8 @@
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+echo'
 <header>
     <div class="header-bloc-gauche" class="header-bloc">
         <a href="index.php">
@@ -42,14 +47,21 @@
                     Multijoueurs
                 </a>
             </p>
-            <p>
-                <a href="forum.php">
-                    Forum
-                </a>
-            </p>
+            ';
+            if (isset($_SESSION['connecte'])&&$_SESSION['connecte'] == 'oui') {
+                echo'
+                <p>
+                    <a href="forum.php">
+                        Forum
+                    </a>
+                </p>
+                ';
+            }
+        echo'
         </nav>
-        <a href="compte.php">
+        <a href="connexion.php">
             <img src="../img/david.jpg" alt="David LD">
         </a>
     </div>
 </header>
+';
