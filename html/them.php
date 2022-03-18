@@ -13,30 +13,6 @@
             <h2>Tous nos jeux</h2>
             <div id="liste">
 
-            <div id="jeux3">
-                    <a href="jeux/jeux1.php">
-                        <img id="img_jeux3" src ="../img/chat.jpg">
-                    </a>
-                </div>
-
-                <div id="jeux3">
-                    <a href="jeux/jeux3.php">
-                        <img id="img_jeux3" src ="../img/memory.jpg">
-                    </a>
-                </div>
-
-                <div id="jeux3">
-                    <a href="jeux/jeux3.php">
-                        <img id="img_jeux3" src ="../img/morpion.png">
-                    </a>
-                </div>
-
-                <div id="jeux3">
-                    <a href="jeux/jeux4.php">
-                        <img id="img_jeux3" src ="../img/tetris.png">
-                    </a>
-                </div>
-
                 <div id="jeux3">
                     <a href="jeux/jeux3.php">
                         <img id="img_jeux3" src ="../img/morpion.png">

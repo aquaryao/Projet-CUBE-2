@@ -33,18 +33,13 @@ echo'
     <div class="header-bloc-droite" class="header-bloc">
         <nav>
             <p>
-                <a href="jeux.php">
-                    Jeux
+                <a href="us.php">
+                    Nos jeux
                 </a>
             </p>
             <p>
-                <a href="jeux.php?type=solo">
-                    Solo
-                </a>
-            </p>
-            <p>
-                <a href="jeux.php?type=multijoueurs">
-                    Multijoueurs
+                <a href="them.php">
+                    Colaborateurs 
                 </a>
             </p>
             ';

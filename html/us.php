@@ -3,20 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accueil - Cesi-esport</title>
-    <link rel="stylesheet" href="../../Projet-CUBE-2/css/index.css">
+    <title>Jeux - Cesisport</title>
     <link rel="stylesheet" href="../../Projet-CUBE-2/css/menu.css">
+    <link rel="stylesheet" href="../../Projet-CUBE-2/css/index.css">
 </head>
 <body>
-    <?php require_once("../php/menu.php")?>
+    <?php require_once("../php/menu.php")?> 
 
-    <main>
-        <section id="carroussel">
-            <div class="img-cote" id="gauche"></div>
-            <img class="img-centre" src="../img/unknown.png" alt="Une image">
-            <div class="img-cote" id="droite"></div>
-        </section>
-        <section id="liste-jeux">
+    <section id="liste-jeux">
             <h2>Tous nos jeux</h2>
             <div id="liste">
                 <div id=jeux1>
@@ -60,38 +54,9 @@
 
                     </a>
                 </div>
-                <div>
-                    <a href="jeux/jeux5.php">
-                        <h3>Titre 3</h3>
-                        <p>Texte Texte Texte Texte Texte</p>
-                    </a>
-                </div>
-                <div>
-                    <a href="jeux/jeux6.php">
-                        <h3>Titre 3</h3>
-                        <p>Texte Texte Texte Texte Texte</p>
-                    </a>
-                </div>
-                <div>
-                    <a href="jeux/jeux7.php">
-                        <h3>Titre 3</h3>
-                        <p>Texte Texte Texte Texte Texte</p>
-                    </a>
-                </div>
-                <div>
-                    <a href="jeux/jeux8.php">
-                        <h3>Titre 3</h3>
-                        <p>Texte Texte Texte Texte Texte</p>
-                    </a>
-                </div>
-            </div>
         </section>
     <main>
-        <?php require_once("../php/footer.php")?>
-            <script src="../js/menu.js"></script>
-            <script src="../js/carroussel.js"></script>
+    <?php require_once("../php/footer.php")?>
+    <script src="../js/menu.js"></script>
 </body>
 </html>
-
-
-                            

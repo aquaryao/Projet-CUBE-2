@@ -8,6 +8,9 @@
 </head>
 <body>
     <?php require_once("../php/menu.php")?>
+    <form action="../php/deconnexion.php">
+        <button type="submit">Se déconnecter</button>
+    </form>
     <script src="../js/menu.js"></script>
 </body>
 </html>

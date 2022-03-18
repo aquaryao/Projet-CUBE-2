@@ -6,16 +6,19 @@ body{
 }
 
 h1{
-    background-color: black;
+    font-size: 50px;
     color: pink;
     margin: auto;
     text-align: center;
 }
 h3{
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.507);
     color: white;
     margin: auto;
     text-align: center;
+    width: 500px;
+    margin-left: 615px;
+    margin-bottom: 10px;
 }
 
 .board {
@@ -42,8 +45,11 @@ h3{
 #tries{
 
     color: pink;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.514);
     text-align: center;
+    width: 500px;
+    margin-left: 615px;
+
 
 }
 

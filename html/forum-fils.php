@@ -17,7 +17,7 @@
 
     foreach ($discussion as $key => $value) {
         echo'
-        <div>
+        <div id="actu">
             <span>'.$value['pseudo'].'</span>
             <span>'.$value['message'].'</span>
             <span>'.$value['creation'].'</span>

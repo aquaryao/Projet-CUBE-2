@@ -15,7 +15,8 @@
     }
     $fils = SelectFils();
     foreach ($fils as $key => $value) {
-        echo'<a href="'.$value['lien'].'?fils='.$value['idfils'].'"><div>
+        echo'<a href="'.$value['lien'].'?fils='.$value['idfils'].'">
+        <div id="actu">
             <span>'.$value['nombrmes'].'</span>
             <span>'.$value['titre'].' - '.$value['pseudo'].'</span>
             <span>
@@ -31,7 +32,7 @@
         }
     }
     ?>
-    <form action="../php/ajouterfils.php" method='post'>
+    <form action="../../Projet-CUBE-2/php/ajouterfils.php" method='post'>
         <label for="fils">Créer un fil : </label>
         <textarea name="titre" cols="70" rows="1"></textarea>
         <button type="submit">Envoyer</button>
