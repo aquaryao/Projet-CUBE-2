@@ -22,7 +22,7 @@
         <label for="user">Utilisateur :</label>
         <input type="text" name="user">
         <label for="mdp">Mot de passe : </label>
-        <input type="password" name="mdp">
+        <input type="password" name="mdp" maxlenght="30">
         <button>Se connecter</button>
     </form>
     <script src="../js/menu.js"></script>
