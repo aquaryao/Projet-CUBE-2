@@ -9,7 +9,6 @@
 </head>
 <body>
     <?php require_once("../php/menu.php")?>
-
     <main>
         <section id="carroussel">
             <div class="img-cote" id="gauche"></div>

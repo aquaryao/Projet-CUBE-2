@@ -1,3 +1,5 @@
+<?php
+echo'
 <header>
     <div class="header-bloc-gauche" class="header-bloc">
         <a href="../index.php">
@@ -41,15 +43,24 @@
                 <a href="../jeux.php?type=multijoueurs">
                     Multijoueurs
                 </a>
-            </p>
-            <p>
-                <a href="../forum.php">
-                    Forum
-                </a>
-            </p>
+            </p>';
+            if ($_SESSION['connecte'] != 'oui') {
+                echo'
+                <p>
+                    <a href="../forum.php">
+                        Forum
+                    </a>
+                </p>
+                ';
+            }
+            echo '
         </nav>
-        <a href="../compte.php">
+        <a href="../connexion.php">
             <img src="../../img/david.jpg" alt="David LD">
         </a>
     </div>
 </header>
+';
+
+//NOTE :
+//Je sais pus trop pourquoi cette page existe mais on va la garde au cas où ça sert plus tard
