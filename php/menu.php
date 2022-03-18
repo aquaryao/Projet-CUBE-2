@@ -1,3 +1,11 @@
+<<<<<<< Updated upstream
+=======
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+echo'
+>>>>>>> Stashed changes
 <header>
     <div class="header-bloc-gauche" class="header-bloc">
         <a href="index.php">
@@ -42,6 +50,7 @@
                     Multijoueurs
                 </a>
             </p>
+<<<<<<< Updated upstream
             <p>
                 <a href="forum.php">
                     Forum
@@ -53,3 +62,23 @@
         </a>
     </div>
 </header>
+=======
+            ';
+            if (isset($_SESSION['connecte'])&&$_SESSION['connecte'] == 'oui') {
+                echo'
+                <p>
+                    <a href="forum.php">
+                        Forum
+                    </a>
+                </p>
+                ';
+            }
+        echo'
+        </nav>
+        <a href="connexion.php">
+            <img src="../img/david.jpg" alt="David LD">
+        </a>
+    </div>
+</header>
+';
+>>>>>>> Stashed changes
