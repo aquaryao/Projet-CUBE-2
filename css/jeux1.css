@@ -1,0 +1,87 @@
+body{
+    background: #d38585;
+    background-image: linear-gradient(to top, #9b59b6, #d38585);
+    min-height: 100vh;
+
+}
+
+h1{
+    background-color: black;
+    color: pink;
+    margin: auto;
+    text-align: center;
+}
+h3{
+    background-color: black;
+    color: white;
+    margin: auto;
+    text-align: center;
+}
+
+.board {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 10px;
+    align-items: stretch;
+    max-width: 800px;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+}
+
+.tile {
+    width: 150px;
+    height: 150px;
+    background-color: pink;
+}
+
+#tries{
+
+    color: pink;
+    background-color: black;
+    text-align: center;
+
+}
+
+/*adaptation au different écran*/
+
+@media (max-width: 700px) {
+    .tile {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 450px) {
+    .tile {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+@media (max-width: 350px) {
+    .tile {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/*image de chat ou faux*/
+
+.tile.bomb {
+    background: transparent;
+    background-image: url('https://i.pinimg.com/474x/9b/32/3c/9b323cc2d411b8941113f4dcdfc68237.jpg');
+    background-size: cover;
+    
+}
+
+.tile.empty {
+    background: transparent;
+    background-image: url('https://cdn3.vectorstock.com/i/1000x1000/43/32/yellow-cartoon-face-sad-upset-emoji-people-emotion-vector-15534332.jpg');
+    background-size: cover;
+}
+

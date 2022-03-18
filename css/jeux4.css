@@ -1,0 +1,80 @@
+body {
+    font-family: sans-serif;
+    font-size: 2em;
+    background: #d38585;
+    background-image: linear-gradient(to top, #9b59b6, #d38585);
+  }
+  #score {
+    display: flex;
+    justify-content: center;
+    font-family: sans-serif;
+    font-size: 1em;
+    background-color: #9b59b6;
+    color: #c59ad6;
+  }
+  
+  .board {
+      display: flex;
+      flex-flow: column nowrap;
+      gap: 1px;
+      align-items: stretch;
+      max-width: 800px;
+      margin: auto;
+  }
+  
+  .row {
+      display: flex;
+      gap: 1px;
+      flex-flow: row nowrap;
+      justify-content: center;
+    align-items: center;
+  }
+  
+  .tile {
+      width: 40px;
+      height: 40px;
+      background-color: rgb(255, 255, 255);
+      display: flex;
+      justify-content: center;
+    align-items: center;
+  }
+  .tile.water {
+     background-color: navy;
+  }
+  .tile.ship {
+     background-color: red;
+  }
+  
+  #tries {
+    color: red;
+    text-align: center;
+  }
+  
+  .tile.name {
+    background: transparent;
+    color: red;
+    text-align: center;
+  }
+  
+  .tile.red {
+    background-color: red;
+  }
+  
+  .tile.aqua {
+    background-color: rgb(115, 230, 230);
+  }
+  .tile.fuchsia {
+    background-color: rgb(235, 88, 235);
+  }
+  .tile.orange {
+    background-color: rgb(240, 188, 93);
+  }
+  .tile.navy {
+    background-color: rgb(80, 80, 221);
+  }
+  @media (max-width: 480px) {
+      .tile {
+          width: 20px;
+          height: 20px;
+      }
+  }

@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 .infobulle {
     position: relative;
     cursor: help;
@@ -7,3 +8,139 @@
   .infobulle:focus::after {
     content: attr(aria-label);
   }
+=======
+h3{
+    color: white;
+}
+div{
+    color: white;
+}
+#grid {
+    display: none;
+}
+
+#recherche{
+    text-align: right;
+}
+
+#grid > p:nth-child(3) {
+    text-align: center;
+}   
+
+.header-bloc-droite {
+    display: flex;
+    align-items: center;
+}
+
+.header-bloc-gauche {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.header-bloc-gauche p{
+    padding: 0px 1vw;
+}
+
+.menu-side{
+    display: none;
+}
+
+.unhidden{
+    display: block;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+body{
+    margin: 0px;
+    background: #d38585;
+    background-image: linear-gradient(to top, #9b59b6, #d38585);
+    min-height: 100vh;
+
+}
+
+header{
+    font-weight: inherit;
+    font-size: 32px;
+    padding: 10px;
+    font-family: sans-serif; 
+    display: flex;
+}
+header{ 
+    display: flex;
+    position: relative; 
+    z-index: 1; }
+header {
+    color: white;
+    letter-spacing: 10px;
+    font-size: 32px;
+    padding: 10px 5px;
+  } 
+
+header img{
+    display: block;
+    height: 69px;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    padding: 0px 1vw;
+}
+
+@media (max-width : 750px) {
+    #grid{
+        display: grid;
+        width: 100%;
+        grid-template-columns: 20% 60% 20%;
+    }
+    .header-bloc-droite{
+        display: none;
+    }
+    .header-bloc-gauche > p{
+        display: none;
+    }
+    header img  {
+        display: none;
+    }
+    nav p{
+        display: none;
+    }
+}
+
+.header {
+    flex-direction: column;
+    height: 100vh;
+    width: 75%;
+    align-items: center;
+}
+
+.nav {
+    flex-direction: column;
+}
+.effet{
+    background-color: #80808000;
+    opacity: 0.90;
+    height: 85%;
+    width: 85%;
+    transition: 0.7s;
+    color: rgba(255, 255, 255, 0);
+    display: flex;
+    align-items: center;
+
+
+}
+.effet:hover {
+    background-color: #9c59b650;
+    border: solid #cfaadd;
+    opacity: 0.90;
+    height: 85%;
+    width: 85%;
+    color:white;
+    font-size: small;
+} 
+>>>>>>> Stashed changes

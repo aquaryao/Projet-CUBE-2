@@ -1,0 +1,54 @@
+#carroussel{
+    display: flex;
+}
+
+#liste{
+    display: flex;
+    justify-content: center;
+    gap: 5vw;
+    flex-wrap: wrap;
+}
+
+#liste > div {
+    background-color: brown;
+    height: 150px;
+    width: 150px;
+    padding: 2%;
+}
+
+#liste-jeux{
+    margin-right: 10vw;
+    margin-left: 10vw;
+}
+
+.img-centre{
+    max-width: 60vw;
+    display: block;
+    max-height: 90vh;
+    position: relative;
+    z-index: 1;
+}
+
+.img-cote{
+    width: 100vw;
+    background-image: url(../img/2.png);
+}
+
+section{
+    margin: 5vh 0px;
+}
+#jeux1{
+    background: url('https://i.pinimg.com/564x/af/9d/f6/af9df6165de3f76bf2c9addd530b3258.jpg') no-repeat center;
+    object-fit: cover;
+}
+#jeux2{
+    background: url('https://i.pinimg.com/564x/bd/77/47/bd77471c66c7979f9886f135f1fd1d2e.jpg') no-repeat center;
+    object-fit: cover;
+}
+#jeux4{
+    background: url('https://i.pinimg.com/564x/6c/74/14/6c7414df16e95a2288791e8fd1fb5b79.jpg') no-repeat center;
+    object-fit: cover;
+}
+h3{
+    color: white;
+}
