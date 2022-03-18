@@ -358,16 +358,20 @@ function doKeyDown(evt) {
   console.log(' I have pressed a key', evt);
   
   switch (evt.key) {
+    case '4':
     case 'q':
     case 'a':
     case 'A': moveLeftPiece();
               break;
+    case '6':
     case 'd':
     case 'D': moveRightPiece();
               break;
+    case '2':
     case 's': 
     case 'S': moveDownPiece();
               break;
+    case '8':
     case ' ':
     case 'z':
     case 'Z':
