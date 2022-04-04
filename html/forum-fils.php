@@ -3,13 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< Updated upstream
-    <title>Inscription - Cesisport</title>
-    <link rel="stylesheet" href="../css/menu.css">
-</head>
-<body>
-    <?php require_once("../php/menu.php")?>
-=======
     <title>Fils de discussion - Cesisport</title>
     <link rel="stylesheet" href="../css/menu.css">
 </head>
@@ -41,7 +34,6 @@
         <textarea name="message" cols="70" rows="10"></textarea>
         <button type="submit">Envoyer</button>
     </form>
->>>>>>> Stashed changes
     <script src="../js/menu.js"></script>
 </body>
 </html>

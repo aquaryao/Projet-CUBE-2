@@ -1,8 +1,5 @@
-<<<<<<< Updated upstream
-=======
 <?php
 echo'
->>>>>>> Stashed changes
 <header>
     <div class="header-bloc-gauche" class="header-bloc">
         <a href="../index.php">
@@ -46,20 +43,6 @@ echo'
                 <a href="../jeux.php?type=multijoueurs">
                     Multijoueurs
                 </a>
-<<<<<<< Updated upstream
-            </p>
-            <p>
-                <a href="../forum.php">
-                    Forum
-                </a>
-            </p>
-        </nav>
-        <a href="../compte.php">
-            <img src="../../img/david.jpg" alt="David LD">
-        </a>
-    </div>
-</header>
-=======
             </p>';
             if ($_SESSION['connecte'] != 'oui') {
                 echo'
@@ -81,4 +64,3 @@ echo'
 
 //NOTE :
 //Je sais pus trop pourquoi cette page existe mais on va la garde au cas où ça sert plus tard
->>>>>>> Stashed changes

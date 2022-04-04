@@ -1,14 +1,9 @@
 <?php
-<<<<<<< Updated upstream
-    function connect(){
-        $db = new PDO('mysql:host=localhost;dbname=base;charset=utf8','root','root');
-=======
     if (session_status() === PHP_SESSION_NONE) {
         session_start();
     }
     function connect(){
-        $db = new PDO('mysql:host=localhost;dbname=cube-2;charset=utf8','root','' );
->>>>>>> Stashed changes
+        $db = new PDO('mysql:host=localhost;dbname=cube2;charset=utf8','root','root');
         return $db;
     }
 
@@ -29,14 +24,11 @@
         $sql = "SELECT 'exemple' FROM `base`";
         $db->query($sql);
     }
-<<<<<<< Updated upstream
-?>
-=======
 
 
 
 
-
+    
     function DeleteFils($numfils){
         $db = connect();
 
@@ -145,26 +137,28 @@
     
         $login = $_POST['user'];
         $mdp = $_POST['mdp'];
-    
-        $sql = $db->prepare("SELECT * FROM `utilisateur` WHERE `pseudo` = :pseudo AND `mdp` = :mdp");
+
+        if (strlen($mdp) > 30) {
+            echo "Le mot de passe dépasse le nombre de caractère autorisé";
+            header("location:connexion.php"); 
+        }
+
+        $sql = $db->prepare("SELECT `mdp` FROM `utilisateur` WHERE `pseudo` = :pseudo");
     
         $sql->bindParam(':pseudo', $login);
-        $sql->bindParam(':mdp', $mdp);
     
         $sql->execute();
         
         $resultat = $sql->fetch(PDO::FETCH_ASSOC);
     
         $sql->closeCursor();
-        
-        if ($resultat) {
+
+        if (password_verify($mdp,$resultat['mdp'])) {
             $_SESSION['connecte'] = 'oui';
             $_SESSION['user'] = $resultat['iduser'];
             header('location:../html/compte.php');
-            exit;
         } else {
             echo "Non";
         }
     }
 ?>
->>>>>>> Stashed changes
