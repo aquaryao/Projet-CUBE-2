@@ -33,20 +33,6 @@ echo'
     <div class="header-bloc-droite" class="header-bloc">
         <nav>
             <p>
-<<<<<<< HEAD
-                <a href="jeux.php">
-                    Jeux
-                </a>
-            </p>
-            <p>
-                <a href="jeux.php?type=solo">
-                    Solo
-                </a>
-            </p>
-            <p>
-                <a href="jeux.php?type=multijoueurs">
-                    Multijoueurs
-=======
                 <a href="us.php">
                     Nos jeux
                 </a>
@@ -54,7 +40,6 @@ echo'
             <p>
                 <a href="them.php">
                     Colaborateurs 
->>>>>>> Morgane
                 </a>
             </p>
             ';

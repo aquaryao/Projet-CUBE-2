@@ -5,11 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jeux2 - Cesisport</title>
     <link rel="stylesheet" href="../../css/menu.css">
-<<<<<<< HEAD
-</head>
-<body>
-    <?php require_once("../../php/menu-lvl2.php")?>   
-=======
     <link rel="stylesheet" href="../../css/jeux2.css">
 </head>
 <body>
@@ -76,7 +71,6 @@
     </section>
 
     <script src="../../js/jeux2.js"></script>
->>>>>>> Morgane
     <script src="../../js/menu.js"></script>
 </body>
 </html>
