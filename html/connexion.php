@@ -25,6 +25,7 @@
         <input type="password" name="mdp" maxlenght="30">
         <button>Se connecter</button>
     </form>
+    <a href="inscription.php"><h4>Inscrivez-vous ici</h4></a>
     <script src="../js/menu.js"></script>
 </body>
 </html>

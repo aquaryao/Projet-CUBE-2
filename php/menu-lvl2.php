@@ -1,4 +1,7 @@
 <?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 echo'
 <header>
     <div class="header-bloc-gauche" class="header-bloc">
@@ -61,6 +64,3 @@ echo'
     </div>
 </header>
 ';
-
-//NOTE :
-//Je sais pus trop pourquoi cette page existe mais on va la garde au cas où ça sert plus tard

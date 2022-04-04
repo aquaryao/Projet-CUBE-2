@@ -70,8 +70,18 @@
 
     function UpdateFilsInfos($fils){
         $db = connect();
-        $sql = $db->prepare("UPDATE `fils` SET `nombrmes` = (SELECT COUNT(idfils) FROM `messages` WHERE `idfils` = :idfils), `datelastmes` = NOW()");
-        $sql->BindParam(':idfils',$fils, PDO::PARAM_INT);
+        $sub_query = $db->prepare("SELECT `idfils` FROM `fils` ORDER BY `idfils` LIMIT :fils,1");
+        $fils = intval($fils);
+        --$fils;
+        $sub_query->BindParam(':fils',$fils, PDO::PARAM_INT);
+        $sub_query->execute();
+        $res_sub = $sub_query->fetch();
+        var_dump($res_sub);
+        exit;
+        $sub_query->closeCursor();
+
+        $sql = $db->prepare("UPDATE `fils` SET `nombrmes` = (SELECT COUNT(`idmess`) FROM `messages` WHERE `idfils` = :idfils), `datelastmes` = NOW() WHERE `idfils` = :idfils");
+        $sql->BindParam(':idfils',$res_sub['idfils'], PDO::PARAM_INT);
         $sql->execute();
         $resultat = $sql->fetchAll();
         $sql->closeCursor();
@@ -109,7 +119,7 @@
 
     function SelectDiscussion(){
         $db = connect();
-        $sql = $db->prepare("SELECT `pseudo`,`message`,`messages`.`creation` FROM `messages` INNER JOIN `fils` ON `fils`.`idfils` = `messages`.`idfils` INNER JOIN `utilisateur` ON `messages`.`iduser` = `utilisateur`.`iduser` WHERE `fils`.`idfils` = :idfils");
+        $sql = $db->prepare("SELECT `pseudo`,`message`,`messages`.`creation`,`photo` FROM `messages` INNER JOIN `fils` ON `fils`.`idfils` = `messages`.`idfils` INNER JOIN `utilisateur` ON `messages`.`iduser` = `utilisateur`.`iduser` WHERE `fils`.`idfils` = :idfils");
         $sql->BindParam('idfils',$_SESSION['fils']);
         $sql->execute();
         $resultat = $sql->fetchAll();
@@ -133,17 +143,18 @@
 
 
     function Connexion(){
-        $db = connect();
-    
+        
         $login = $_POST['user'];
         $mdp = $_POST['mdp'];
-
+        
         if (strlen($mdp) > 30) {
             echo "Le mot de passe dépasse le nombre de caractère autorisé";
-            header("location:connexion.php"); 
+            exit;
         }
 
-        $sql = $db->prepare("SELECT `mdp` FROM `utilisateur` WHERE `pseudo` = :pseudo");
+        $db = connect();
+
+        $sql = $db->prepare("SELECT `mdp`,`iduser` FROM `utilisateur` WHERE `pseudo` = :pseudo");
     
         $sql->bindParam(':pseudo', $login);
     
@@ -160,5 +171,65 @@
         } else {
             echo "Non";
         }
+    }
+
+    function Inscription(){
+        $nom = $_POST['nom'];
+        $prenom = $_POST['prenom'];
+        $age = $_POST['age'];
+        $email = $_POST['email'];
+        $pseudo = $_POST['pseudo'];
+        $photo = $_FILES['photo']['name'];
+        $mdp = $_POST['mdp'];
+        $confirmdp = $_POST['confirmdp'];
+
+        $allowedTypes = array(IMAGETYPE_PNG, IMAGETYPE_JPEG, IMAGETYPE_GIF);
+        $detectedType = exif_imagetype($_FILES['photo']['tmp_name']);
+        if (!in_array($detectedType, $allowedTypes)) {
+            echo "Type de fichier invalide";
+            exit;
+        }
+        
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            echo "Adresse Email invalide";
+            exit;
+        }
+        
+        if ($mdp  != $confirmdp) {
+            echo "Le mot de de passe et sa confirmation sont différent";
+            exit;
+        }
+        $mdp  = password_hash($mdp,PASSWORD_DEFAULT);
+
+        $uploaddir = '/Applications/MAMP//htdocs/Projet-CUBE-2/img/';
+        $uploadfile = $uploaddir . basename($_FILES['photo']['name']);
+
+        if (move_uploaded_file($_FILES['photo']['tmp_name'], $uploadfile)) {
+            echo "File is valid, and was successfully uploaded.\n";
+        } else {
+            var_dump($_FILES['photo']['tmp_name']);
+            echo "<br>";
+            echo $uploadfile;
+            echo "<br>";    
+            echo"L'envoie du fichier à échoué ou le fichier est invalide";
+            exit;
+        }
+        
+        $db = connect();
+
+        $sql = $db->prepare("INSERT INTO `utilisateur` (`nom`,`prenom`,`pseudo`,`mdp`,`age`,`email`,`photo`) VALUES (:nom,:prenom,:pseudo,:mdp,:age,:email,:photo)");
+
+        $sql->BindParam(':nom',$nom, PDO::PARAM_STR);
+        $sql->BindParam(':prenom',$prenom, PDO::PARAM_STR);
+        $sql->BindParam(':pseudo',$pseudo, PDO::PARAM_STR);
+        $sql->BindParam(':mdp',$mdp, PDO::PARAM_STR);
+        $sql->BindParam(':age',$age, PDO::PARAM_INT);
+        $sql->BindParam(':email',$email, PDO::PARAM_STR);
+        $sql->BindParam(':photo',$photo, PDO::PARAM_STR);
+        $sql->execute();
+        $resultat = $sql->fetchAll();
+        $sql->closeCursor();
+
+        header("location:connexion.php");
     }
 ?>

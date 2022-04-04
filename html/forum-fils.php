@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fils de discussion - Cesisport</title>
     <link rel="stylesheet" href="../css/menu.css">
+    <link rel="stylesheet" href="../css/fils.css">
 </head>
 <body>
     <?php 
@@ -18,6 +19,7 @@
     foreach ($discussion as $key => $value) {
         echo'
         <div>
+            <img src="../img/'.$value['photo'].'" alt="Image de profil">
             <span>'.$value['pseudo'].'</span>
             <span>'.$value['message'].'</span>
             <span>'.$value['creation'].'</span>

@@ -15,7 +15,8 @@
     }
     $fils = SelectFils();
     foreach ($fils as $key => $value) {
-        echo'<a href="'.$value['lien'].'?fils='.$value['idfils'].'"><div>
+        echo'<a href="'.$value['lien'].'?fils='.$value['idfils'].'">
+        <div>
             <span>'.$value['nombrmes'].'</span>
             <span>'.$value['titre'].' - '.$value['pseudo'].'</span>
             <span>
