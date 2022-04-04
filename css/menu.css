@@ -1,3 +1,12 @@
+h3{
+    margin: auto;
+    color: #9c59b6;
+    text-align: center;
+}
+
+div{
+    color: white;
+}
 #grid {
     display: none;
 }
@@ -40,20 +49,30 @@ a{
 
 body{
     margin: 0px;
+    background: #d38585;
+    background-image: linear-gradient(to top, #9b59b6, #d38585);
+    min-height: 100vh;
+
 }
 
 header{
     font-weight: inherit;
-    font-size: 20px;
-    font-family: sans-serif;
-}
-
-header{
+    font-size: 32px;
+    padding: 10px;
+    font-family: sans-serif; 
     display: flex;
-    background-color: #F78D3F;
-    position: relative;
-    z-index: 1;
 }
+header{ 
+    display: flex;
+    position: relative; 
+    z-index: 1; }
+header {
+    color: white;
+    letter-spacing: 10px;
+    font-size: 32px;
+    padding: 10px 5px;
+    background-color: #f2f2f238;
+  } 
 
 header img{
     display: block;
@@ -95,4 +114,62 @@ nav {
 
 .nav {
     flex-direction: column;
+}
+.effet{
+    background-color: #80808000;
+    opacity: 0.90;
+    height: 85%;
+    width: 85%;
+    transition: 0.7s;
+    color: rgba(255, 255, 255, 0);
+    display: flex;
+    align-items: center;
+
+
+}
+.effet:hover {
+    background-color: #9c59b650;
+    border: solid #cfaadd;
+    opacity: 0.90;
+    height: 85%;
+    width: 85%;
+    color:white;
+    font-size: small;
+} 
+
+#actu{
+    background-color: rgba(255, 255, 255, 0.589);
+    margin: 25px;
+    border-radius: 5px;
+    color: #9b59b6;
+    border: thick double #9b59b6;
+    width: 800px;
+}
+#actu:hover{
+    border: none;
+    background-color: rgba(255, 255, 255, 0.822);
+    opacity: 0.9;
+    transition: all .5s ease-in;
+    margin: 25px;
+    border-radius: 5px; 
+    border: thick double #9b59b6;
+}
+textarea:hover {
+    border: none;
+    background-color: rgba(255, 255, 255, 0.822);
+    opacity: 0.9;
+    transition: all .5s ease-in;
+    margin: 25px;
+    border-radius: 5px; 
+    border: thick double #9b59b6;
+}
+textarea{
+    border: none;
+    background-color: rgba(255, 255, 255, 0.589);
+    opacity: 0.9;
+    transition: all .5s ease-in;
+    border-radius: 5px;
+    margin: 25px;
+    border-radius: 5px; 
+    border: thick double #9b59b6;
 }

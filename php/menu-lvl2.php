@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?php
+=======
+<?php if( session_status()=== PHP_SESSION_NONE){session_start();}
+>>>>>>> Morgane
 echo'
 <header>
     <div class="header-bloc-gauche" class="header-bloc">
@@ -30,6 +34,7 @@ echo'
     <div class="header-bloc-droite" class="header-bloc">
         <nav>
             <p>
+<<<<<<< HEAD
                 <a href="../jeux.php">
                     Jeux
                 </a>
@@ -42,6 +47,15 @@ echo'
             <p>
                 <a href="../jeux.php?type=multijoueurs">
                     Multijoueurs
+=======
+                <a href="../us.php">
+                    Nos jeux
+                </a>
+            </p>
+            <p>
+                <a href="../them.php">
+                Collaborateurs 
+>>>>>>> Morgane
                 </a>
             </p>';
             if ($_SESSION['connecte'] != 'oui') {
