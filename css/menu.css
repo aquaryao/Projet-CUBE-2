@@ -1,6 +1,9 @@
 h3{
-    color: white;
+    margin: auto;
+    color: #9c59b6;
+    text-align: center;
 }
+
 div{
     color: white;
 }
@@ -139,5 +142,34 @@ nav {
     margin: 25px;
     border-radius: 5px;
     color: #9b59b6;
-    
+    border: thick double #9b59b6;
+    width: 800px;
+}
+#actu:hover{
+    border: none;
+    background-color: rgba(255, 255, 255, 0.822);
+    opacity: 0.9;
+    transition: all .5s ease-in;
+    margin: 25px;
+    border-radius: 5px; 
+    border: thick double #9b59b6;
+}
+textarea:hover {
+    border: none;
+    background-color: rgba(255, 255, 255, 0.822);
+    opacity: 0.9;
+    transition: all .5s ease-in;
+    margin: 25px;
+    border-radius: 5px; 
+    border: thick double #9b59b6;
+}
+textarea{
+    border: none;
+    background-color: rgba(255, 255, 255, 0.589);
+    opacity: 0.9;
+    transition: all .5s ease-in;
+    border-radius: 5px;
+    margin: 25px;
+    border-radius: 5px; 
+    border: thick double #9b59b6;
 }

@@ -36,7 +36,7 @@ echo'
             </p>
             <p>
                 <a href="../them.php">
-                Colaborateurs 
+                Collaborateurs 
                 </a>
             </p>';
             if ($_SESSION['connecte'] != 'oui') {

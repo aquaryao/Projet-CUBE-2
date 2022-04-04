@@ -48,6 +48,7 @@
 
     function DeleteMessage($nummess){
         $db = connect();
+        
         $fils = $_SESSION['fils'];
         $sub_query = $db->prepare("SELECT `idmess` FROM `messages` WHERE `idfils` = :idfils ORDER BY `idmess` LIMIT :nummess,1");
         $sub_query->BindParam(':idfils',$fils, PDO::PARAM_INT);

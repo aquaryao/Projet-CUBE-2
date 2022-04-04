@@ -13,47 +13,42 @@
     <section id="liste-jeux">
             <h2>Tous nos jeux</h2>
             <div id="liste">
-                <div id=jeux1>
+            <div id=jeux1>
                     <a href="jeux/jeux1.php">
                     <div>
-                        <div class="phototeam" id="demichateur">
-                            <div class="effet">Le but du jeu est de découvrir la bombe, c'est-à-dire en cliquer sur la case qui la dissimulent.</div>
-                        </div>
+                        <img id="imgjeux1" src="../../Projet-CUBE-2/img/chat.jpg">
                     </div>
                         <h3>Démichateur</h3>
                     </a>
                 </div>
+
                 <div id=jeux2>
                     <a href="jeux/jeux2.php">
-                    <div>
-                        <div class="phototeam" id="memory">
-                            <div class="effet">Le but du jeu est de découvrir la bombe, c'est-à-dire en cliquer sur la case qui la dissimulent.</div>
+                        <div>
+                            <img id="imgjeux1" src="../../Projet-CUBE-2/img/memory.jpg">
                         </div>
-                    </div>
-                    
-                        <h3>Memory</h3>
+                    </a>
+                    <h3>Memory</h3>
+                </div>
 
-                    </a>
-                </div>
-                <div>
+                <div id=jeux3>
                     <a href="jeux/jeux3.php">
-                        <h3>Titre 3</h3>
-                        <p>Texte Texte Texte Texte Texte</p>
+                    <div>
+                        <img id="imgjeux1" src="../../Projet-CUBE-2/img/morpion.png">
+                    </div>
+                        <h3>Morpion</h3>
                     </a>
                 </div>
+
                 <div id=jeux4>
                     <a href="jeux/jeux4.php">
                     <div>
-                        <div class="phototeam" id="memory">
-                            <div class="effet">
-                               Tetris met le joueur au défi de réaliser des lignes complètes en déplaçant des pièces de formes différentes.
-                            </div>
-                        </div>
+                        <img id="imgjeux1" src="../../Projet-CUBE-2/img/tetris.png">
                     </div>
                         <h3>Tetris</h3>
-
                     </a>
                 </div>
+            </div>
         </section>
     <main>
     <?php require_once("../php/footer.php")?>

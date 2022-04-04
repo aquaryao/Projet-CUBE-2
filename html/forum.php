@@ -20,8 +20,8 @@
             <span>'.$value['nombrmes'].'</span>
             <span>'.$value['titre'].' - '.$value['pseudo'].'</span>
             <span>
-                <div>'.$value['creation'].'</div>
-                <div>'.$value['datelastmes'].'</div>
+                <div>Date de création: '.$value['creation'].'</div>
+                <div>Dernière modification: '.$value['datelastmes'].'</div>
             </span>
         </div></a>';
         if (isset($_SESSION['user'])&&$_SESSION['user'] == 1) {

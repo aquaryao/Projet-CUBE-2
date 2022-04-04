@@ -14,6 +14,7 @@
     height: 150px;
     width: 150px;
     padding: 2%;
+    border-radius: 5px;
 }
 
 #liste-jeux{
@@ -37,30 +38,10 @@
 section{
     margin: 5vh 0px;
 }
-#jeux1{
-    background: url('https://i.pinimg.com/564x/af/9d/f6/af9df6165de3f76bf2c9addd530b3258.jpg') no-repeat center;
-    object-fit: cover;
-}
-#jeux2{ 
-    background: url('https://i.pinimg.com/564x/bd/77/47/bd77471c66c7979f9886f135f1fd1d2e.jpg') no-repeat center;
-    object-fit: cover;
-}
-#jeux4{
-    background: url('https://i.pinimg.com/564x/6c/74/14/6c7414df16e95a2288791e8fd1fb5b79.jpg') no-repeat center;
-    object-fit: cover;
-}
 h3{
-    color: white;
+    color: rgb(0, 0, 0);
 }
 section{
     margin: 5vh 0px;
 }
 
-#img_jeux2{
-    background: url(../img/)
-}
-
-#img_jeux3{
-    align-items: center;
-
-}
