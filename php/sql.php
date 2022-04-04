@@ -76,8 +76,6 @@
         $sub_query->BindParam(':fils',$fils, PDO::PARAM_INT);
         $sub_query->execute();
         $res_sub = $sub_query->fetch();
-        var_dump($res_sub);
-        exit;
         $sub_query->closeCursor();
 
         $sql = $db->prepare("UPDATE `fils` SET `nombrmes` = (SELECT COUNT(`idmess`) FROM `messages` WHERE `idfils` = :idfils), `datelastmes` = NOW() WHERE `idfils` = :idfils");
