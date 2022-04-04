@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fils de discussion - Cesisport</title>
     <link rel="stylesheet" href="../css/menu.css">
+    <link rel="stylesheet" href="../css/fils.css">
 </head>
 <body>
     <?php 
@@ -17,11 +18,11 @@
 
     foreach ($discussion as $key => $value) {
         echo'
-        <div id="actu">
-        
-            <span>'.$value['pseudo'].'</span><br>
-            <span>'.$value['message'].'</span><br><br>
-            <span>Publier le '.$value['creation'].'</span>
+        <div>
+            <img src="../img/'.$value['photo'].'" alt="Image de profil">
+            <span>'.$value['pseudo'].'</span>
+            <span>'.$value['message'].'</span>
+            <span>'.$value['creation'].'</span>
         </div>';
         if (isset($_SESSION['user'])&&$_SESSION['user'] == 1) {
             echo '
