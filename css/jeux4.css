@@ -1,8 +1,8 @@
 body {
     font-family: sans-serif;
     font-size: 2em;
-    background: #d38585;
-    background-image: linear-gradient(to top, #9b59b6, #d38585);
+    background-image: linear-gradient(to top, #9b59b6, #7977f1);
+
   }
   #score {
     display: flex;

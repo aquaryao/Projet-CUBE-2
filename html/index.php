@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accueil - O'cesEat</title>
+    <title>Accueil -CESI-esport</title>
     <link rel="stylesheet" href="../../Projet-CUBE-2/css/index.css">
     <link rel="stylesheet" href="../../Projet-CUBE-2/css/menu.css">
 </head>
@@ -97,7 +97,7 @@
                     <div>
                         <img id="imgjeux1" src="../../Projet-CUBE-2/img/bataille.png">
                     </div>
-                        <h3>Bataille navale</h3>
+                        <h3>Naval Battle</h3>
                     </a>
                 </div>
 

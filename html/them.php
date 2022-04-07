@@ -55,7 +55,7 @@
                     <div>
                         <img id="imgjeux1" src="../../Projet-CUBE-2/img/bataille.png">
                     </div>
-                        <h3>Bataille navale</h3>
+                        <h3>Naval Battle</h3>
                     </a>
                 </div>
 

@@ -2,15 +2,28 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-align: center;
+    font-family: Roboto, sans-serif;
+    font-weight: 200;
+    text-transform: uppercase;
   }
+
+h1{
+  text-align: center;
+  font-family: Roboto, sans-serif;
+  font-weight: 200;
+  text-transform: uppercase;
+  color: #34495e;
+}
+
   body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     min-height: 100vh;
-    background: #d38585;
-    background-image: linear-gradient(to top, #9b59b6, #d38585);
+    background: #7977f1;
+    background-image: linear-gradient(to top, #9b59b6, #7977f1);
     font-family: arial;
     position: relative;
     text-align: center;

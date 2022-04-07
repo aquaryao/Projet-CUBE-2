@@ -3,7 +3,7 @@ echo'
 <header>
     <div class="header-bloc-gauche" class="header-bloc">
         <a href="../index.php">
-            <img src="../../img/david-hd.jpg" alt="David HD">
+            <img src="https://i.pinimg.com/originals/a8/62/ea/a862eaa9fb6c34517bbb4dadaea95718.jpg" alt="David HD">
         </a>
         <p>
             <a href="../index.php">Cesi-esport</a>
@@ -31,12 +31,12 @@ echo'
         <nav>
             <p>
                 <a href="../us.php">
-                    Nos jeux
+                    Jeux
                 </a>
             </p>
             <p>
                 <a href="../them.php">
-                Collaborateurs 
+                Collaborations
                 </a>
             </p>';
             if ($_SESSION['connecte'] != 'oui') {

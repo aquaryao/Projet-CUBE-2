@@ -11,10 +11,11 @@
 
 #liste > div {
     background-color: rgba(255, 255, 255, 0.692);
-    height: 150px;
+    height: 160px;
     width: 150px;
     padding: 2%;
     border-radius: 5px;
+    box-shadow: 2px 2px 9px black;
 }
 
 #liste-jeux{

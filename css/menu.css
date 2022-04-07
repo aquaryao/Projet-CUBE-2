@@ -1,9 +1,20 @@
 h3{
     margin: auto;
-    color: #9c59b6;
+    color: #0000008c;
     text-align: center;
+    font-family: Roboto, sans-serif;
+    font-weight: 200;
+    text-transform: uppercase;
 }
 
+h2{
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    font-family: Roboto, sans-serif;
+    font-weight: 200;
+    text-transform: uppercase;
+}
 div{
     color: white;
 }
@@ -45,12 +56,15 @@ div{
 a{
     text-decoration: none;
     color: inherit;
+    font-family: Roboto, sans-serif;
+    font-weight: 200;
+    text-transform: uppercase;
 }
 
 body{
     margin: 0px;
-    background: #d38585;
-    background-image: linear-gradient(to top, #9b59b6, #d38585);
+    background: #7977f1;
+    background-image: linear-gradient(to top, #9b59b6, #7977f1);
     min-height: 100vh;
 
 }
@@ -61,6 +75,7 @@ header{
     padding: 10px;
     font-family: sans-serif; 
     display: flex;
+
 }
 header{ 
     display: flex;
@@ -72,11 +87,13 @@ header {
     font-size: 32px;
     padding: 10px 5px;
     background-color: #f2f2f238;
+    box-shadow: 2px 2px 9px black;
   } 
 
 header img{
     display: block;
     height: 69px;
+    border-radius: 50%;
 }
 
 nav {

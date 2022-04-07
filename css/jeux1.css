@@ -1,6 +1,6 @@
 body{
-    background: #d38585;
-    background-image: linear-gradient(to top, #9b59b6, #d38585);
+    background: #7977f1;
+    background-image: linear-gradient(to top, #9b59b6, #7977f1);
     min-height: 100vh;
 
 }
@@ -10,6 +10,9 @@ h1{
     color: pink;
     margin: auto;
     text-align: center;
+    font-family: Roboto, sans-serif;
+    font-weight: 200;
+    text-transform: uppercase;
 }
 h3{
     background-color: rgba(0, 0, 0, 0.507);
@@ -17,8 +20,10 @@ h3{
     margin: auto;
     text-align: center;
     width: 500px;
-    margin-left: 615px;
     margin-bottom: 10px;
+    font-family: Roboto, sans-serif;
+    font-weight: 200;
+    text-transform: uppercase;
 }
 
 .board {
@@ -43,14 +48,14 @@ h3{
 }
 
 #tries{
-
-    color: pink;
-    background-color: rgba(0, 0, 0, 0.514);
+    background-color: rgba(0, 0, 0, 0.507);
+    color: white;
+    margin: auto;
     text-align: center;
     width: 500px;
-    margin-left: 615px;
-
-
+    margin-bottom: 10px;
+    font-family: Roboto, sans-serif;
+    font-weight: 200;
 }
 
 /*adaptation au different écran*/
