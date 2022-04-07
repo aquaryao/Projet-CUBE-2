@@ -3,11 +3,7 @@
         session_start();
     }
     function connect(){
-<<<<<<< Updated upstream
-        $db = new PDO('mysql:host=localhost;dbname=cube2;charset=utf8','root','root');
-=======
         $db = new PDO('mysql:host=localhost;dbname=cube2;charset=utf8','root','root' );
->>>>>>> Stashed changes
         return $db;
     }
 

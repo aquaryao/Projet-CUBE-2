@@ -7,15 +7,6 @@
     <link rel="stylesheet" href="../css/menu.css">
     <link rel="stylesheet" href="../css/compte.css">
 </head>
-<<<<<<< Updated upstream
-    <body>
-        <?php require_once("../php/menu.php")?>
-        <form action="../php/deconnexion.php">
-            <button type="submit">Se déconnecter</button>
-        </form>
-        <script src="../js/menu.js"></script>
-    </body>
-=======
 <body>
     <?php require_once("../php/menu.php");
     require_once('../php/sql.php');
@@ -48,5 +39,4 @@
     </form>
     <script src="../js/menu.js"></script>
 </body>
->>>>>>> Stashed changes
 </html>
