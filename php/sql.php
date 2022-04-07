@@ -3,26 +3,12 @@
         session_start();
     }
     function connect(){
+<<<<<<< Updated upstream
         $db = new PDO('mysql:host=localhost;dbname=cube2;charset=utf8','root','root');
+=======
+        $db = new PDO('mysql:host=localhost;dbname=cube2;charset=utf8','root','root' );
+>>>>>>> Stashed changes
         return $db;
-    }
-
-    function insert($exemple){
-        $db = connect();
-        $sql = "INSERT INTO `base` (`exemple`) VALUES ('$exemple')";            
-        $db->exec($sql);
-    }
-
-    function update($exemple){
-        $db = connect();
-        $sql = "UPDATE `base` SET `exemple` = '$exemple' WHERE `exemple` = '$exemple'";
-        $db->exec($sql);
-    }
-
-    function select($exemple){
-        $db = connect();
-        $sql = "SELECT 'exemple' FROM `base`";
-        $db->query($sql);
     }
 
 
@@ -140,6 +126,50 @@
 
 
 
+    function Inscription(){
+        $nom = $_POST['nom'];
+        $prenom = $_POST['prenom'];
+        $age = $_POST['age'];
+        $email = $_POST['email'];
+        $pseudo = $_POST['pseudo'];
+        $photo = $_FILES['photo']['name'];
+        $mdp = $_POST['mdp'];
+        $confirmdp = $_POST['confirmdp'];
+
+        $allowedTypes = array(IMAGETYPE_PNG, IMAGETYPE_JPEG, IMAGETYPE_GIF);
+        $detectedType = exif_imagetype($_FILES['photo']['tmp_name']);
+        if (!in_array($detectedType, $allowedTypes)) {
+            echo "Type de fichier invalide";
+            exit;
+        }
+        
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            echo "Adresse Email invalide";
+            exit;
+        }
+        
+        if ($mdp  != $confirmdp) {
+            echo "Le mot de de passe et sa confirmation sont différent";
+            exit;
+        }
+        $mdp  = password_hash($mdp,PASSWORD_DEFAULT);
+
+        $uploaddir = '/Applications/MAMP//htdocs/Projet-CUBE-2/img/';
+        $uploadfile = $uploaddir . basename($_FILES['photo']['name']);
+
+        if (move_uploaded_file($_FILES['photo']['tmp_name'], $uploadfile)) {
+            echo "File is valid, and was successfully uploaded.\n";
+        } else {
+            var_dump($_FILES['photo']['tmp_name']);
+            echo "<br>";
+            echo $uploadfile;
+            echo "<br>";    
+            echo"L'envoie du fichier à échoué ou le fichier est invalide";
+            exit;
+        }
+
+    }
+
     function Connexion(){
         
         $login = $_POST['user'];
@@ -171,6 +201,7 @@
         }
     }
 
+<<<<<<< Updated upstream
     function Inscription(){
         $nom = $_POST['nom'];
         $prenom = $_POST['prenom'];
@@ -231,3 +262,23 @@
         header("location:connexion.php");
     }
 ?>
+=======
+    function Profil()
+    {
+        $db = connect();
+
+        $login = $_SESSION['user'];
+
+        $sql = $db->prepare("SELECT `pseudo`,`nom`,`prenom`,`age`,`email`,`photo` FROM `utilisateur` WHERE `iduser` = :user");
+    
+        $sql->bindParam(':user', $login);
+    
+        $sql->execute();
+        
+        $resultat = $sql->fetch(PDO::FETCH_ASSOC);
+    
+        $sql->closeCursor();
+
+        return $resultat;
+    }
+>>>>>>> Stashed changes
