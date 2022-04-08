@@ -70,10 +70,7 @@
 
 
 
-<<<<<<< HEAD
-=======
 
->>>>>>> Morgane
     function UpdateFilsInfos($fils){
         $db = connect();
         $sql = $db->prepare("UPDATE `fils` SET `nombrmes` = (SELECT COUNT(idfils) FROM `messages` WHERE `idfils` = :idfils), `datelastmes` = NOW()");
