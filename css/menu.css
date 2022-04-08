@@ -1,3 +1,23 @@
+h3{
+    margin: auto;
+    color: #0000008c;
+    text-align: center;
+    font-family: Roboto, sans-serif;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+
+h2{
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    font-family: Roboto, sans-serif;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+div{
+    color: white;
+}
 #grid {
     display: none;
 }
@@ -36,28 +56,44 @@
 a{
     text-decoration: none;
     color: inherit;
+    font-family: Roboto, sans-serif;
+    font-weight: 200;
+    text-transform: uppercase;
 }
 
 body{
     margin: 0px;
+    background: #7977f1;
+    background-image: linear-gradient(to top, #9b59b6, #7977f1);
+    min-height: 100vh;
+
 }
 
 header{
     font-weight: inherit;
-    font-size: 20px;
-    font-family: sans-serif;
-}
-
-header{
+    font-size: 32px;
+    padding: 10px;
+    font-family: sans-serif; 
     display: flex;
-    background-color: #F78D3F;
-    position: relative;
-    z-index: 1;
+
 }
+header{ 
+    display: flex;
+    position: relative; 
+    z-index: 1; }
+header {
+    color: white;
+    letter-spacing: 10px;
+    font-size: 32px;
+    padding: 10px 5px;
+    background-color: #f2f2f238;
+    box-shadow: 2px 2px 9px black;
+  } 
 
 header img{
     display: block;
     height: 69px;
+    border-radius: 50%;
 }
 
 nav {
@@ -95,4 +131,62 @@ nav {
 
 .nav {
     flex-direction: column;
+}
+.effet{
+    background-color: #80808000;
+    opacity: 0.90;
+    height: 85%;
+    width: 85%;
+    transition: 0.7s;
+    color: rgba(255, 255, 255, 0);
+    display: flex;
+    align-items: center;
+
+
+}
+.effet:hover {
+    background-color: #9c59b650;
+    border: solid #cfaadd;
+    opacity: 0.90;
+    height: 85%;
+    width: 85%;
+    color:white;
+    font-size: small;
+} 
+
+#actu{
+    background-color: rgba(255, 255, 255, 0.589);
+    margin: 25px;
+    border-radius: 5px;
+    color: #9b59b6;
+    border: thick double #9b59b6;
+    width: 800px;
+}
+#actu:hover{
+    border: none;
+    background-color: rgba(255, 255, 255, 0.822);
+    opacity: 0.9;
+    transition: all .5s ease-in;
+    margin: 25px;
+    border-radius: 5px; 
+    border: thick double #9b59b6;
+}
+textarea:hover {
+    border: none;
+    background-color: rgba(255, 255, 255, 0.822);
+    opacity: 0.9;
+    transition: all .5s ease-in;
+    margin: 25px;
+    border-radius: 5px; 
+    border: thick double #9b59b6;
+}
+textarea{
+    border: none;
+    background-color: rgba(255, 255, 255, 0.589);
+    opacity: 0.9;
+    transition: all .5s ease-in;
+    border-radius: 5px;
+    margin: 25px;
+    border-radius: 5px; 
+    border: thick double #9b59b6;
 }

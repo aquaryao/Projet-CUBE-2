@@ -17,10 +17,11 @@
 
     foreach ($discussion as $key => $value) {
         echo'
-        <div>
-            <span>'.$value['pseudo'].'</span>
-            <span>'.$value['message'].'</span>
-            <span>'.$value['creation'].'</span>
+        <div id="actu">
+        
+            <span>'.$value['pseudo'].'</span><br>
+            <span>'.$value['message'].'</span><br><br>
+            <span>Publier le '.$value['creation'].'</span>
         </div>';
         if (isset($_SESSION['user'])&&$_SESSION['user'] == 1) {
             echo '

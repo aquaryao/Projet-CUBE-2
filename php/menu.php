@@ -6,7 +6,7 @@ echo'
 <header>
     <div class="header-bloc-gauche" class="header-bloc">
         <a href="index.php">
-            <img src="../img/david-hd.jpg" alt="David HD">
+            <img src="https://i.pinimg.com/originals/a8/62/ea/a862eaa9fb6c34517bbb4dadaea95718.jpg" alt="David HD">
         </a>
         <p>
             <a href="index.php">Cesi-esport</a>
@@ -33,11 +33,16 @@ echo'
     <div class="header-bloc-droite" class="header-bloc">
         <nav>
             <p>
+<<<<<<< HEAD
                 <a href="jeux.php">
+=======
+                <a href="us.php">
+>>>>>>> Morgane
                     Jeux
                 </a>
             </p>
             <p>
+<<<<<<< HEAD
                 <a href="jeux.php?type=solo">
                     Solo
                 </a>
@@ -45,6 +50,10 @@ echo'
             <p>
                 <a href="jeux.php?type=multijoueurs">
                     Multijoueurs
+=======
+                <a href="them.php">
+                    Collaborations 
+>>>>>>> Morgane
                 </a>
             </p>
             ';

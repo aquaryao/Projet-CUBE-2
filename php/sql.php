@@ -3,7 +3,11 @@
         session_start();
     }
     function connect(){
+<<<<<<< HEAD
         $db = new PDO('mysql:host=localhost;dbname=cube2;charset=utf8','root','root');
+=======
+        $db = new PDO('mysql:host=localhost;dbname=cube-2;charset=utf8','root','' );
+>>>>>>> Morgane
         return $db;
     }
 
@@ -28,7 +32,11 @@
 
 
 
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> Morgane
     function DeleteFils($numfils){
         $db = connect();
 
@@ -48,6 +56,10 @@
 
     function DeleteMessage($nummess){
         $db = connect();
+<<<<<<< HEAD
+=======
+        
+>>>>>>> Morgane
         $fils = $_SESSION['fils'];
         $sub_query = $db->prepare("SELECT `idmess` FROM `messages` WHERE `idfils` = :idfils ORDER BY `idmess` LIMIT :nummess,1");
         $sub_query->BindParam(':idfils',$fils, PDO::PARAM_INT);
@@ -68,6 +80,10 @@
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> Morgane
     function UpdateFilsInfos($fils){
         $db = connect();
         $sql = $db->prepare("UPDATE `fils` SET `nombrmes` = (SELECT COUNT(idfils) FROM `messages` WHERE `idfils` = :idfils), `datelastmes` = NOW()");
@@ -133,6 +149,7 @@
 
 
     function Connexion(){
+<<<<<<< HEAD
         $db = connect();
     
         $login = $_POST['user'];
@@ -144,6 +161,20 @@
         }
 
         $sql = $db->prepare("SELECT `mdp` FROM `utilisateur` WHERE `pseudo` = :pseudo");
+=======
+        
+        $login = $_POST['user'];
+        $mdp = $_POST['mdp'];
+        
+        if (strlen($mdp) > 30) {
+            echo "Le mot de passe dépasse le nombre de caractère autorisé";
+            exit;
+        }
+
+        $db = connect();
+
+        $sql = $db->prepare("SELECT `mdp`,`iduser` FROM `utilisateur` WHERE `pseudo` = :pseudo");
+>>>>>>> Morgane
     
         $sql->bindParam(':pseudo', $login);
     

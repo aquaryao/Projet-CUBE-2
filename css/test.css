@@ -1,3 +1,9 @@
+body{
+    text-align: center;
+    background-image: linear-gradient(to top, #9b59b6, #7977f1);
+    min-height: 100vh;
+}
+
 #carroussel{
     display: flex;
 }
@@ -10,12 +16,10 @@
 }
 
 #liste > div {
-    background-color: rgba(255, 255, 255, 0.692);
-    height: 160px;
+    background-color: red;
+    height: 150px;
     width: 150px;
     padding: 2%;
-    border-radius: 5px;
-    box-shadow: 2px 2px 9px black;
 }
 
 #liste-jeux{
@@ -39,10 +43,13 @@
 section{
     margin: 5vh 0px;
 }
-h3{
-    color: rgb(0, 0, 0);
-}
-section{
-    margin: 5vh 0px;
+
+#jeux2{
+    background: url(../img/)
 }
 
+
+#img_jeux3{
+    align-items: center;
+
+}

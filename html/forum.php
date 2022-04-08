@@ -15,12 +15,13 @@
     }
     $fils = SelectFils();
     foreach ($fils as $key => $value) {
-        echo'<a href="'.$value['lien'].'?fils='.$value['idfils'].'"><div>
+        echo'<a href="'.$value['lien'].'?fils='.$value['idfils'].'">
+        <div id="actu">
             <span>'.$value['nombrmes'].'</span>
             <span>'.$value['titre'].' - '.$value['pseudo'].'</span>
             <span>
-                <div>'.$value['creation'].'</div>
-                <div>'.$value['datelastmes'].'</div>
+                <div>Date de création: '.$value['creation'].'</div>
+                <div>Dernière modification: '.$value['datelastmes'].'</div>
             </span>
         </div></a>';
         if (isset($_SESSION['user'])&&$_SESSION['user'] == 1) {
@@ -31,7 +32,7 @@
         }
     }
     ?>
-    <form action="../php/ajouterfils.php" method='post'>
+    <form action="../../Projet-CUBE-2/php/ajouterfils.php" method='post'>
         <label for="fils">Créer un fil : </label>
         <textarea name="titre" cols="70" rows="1"></textarea>
         <button type="submit">Envoyer</button>
