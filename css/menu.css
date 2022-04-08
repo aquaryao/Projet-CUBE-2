@@ -120,6 +120,9 @@ nav {
     nav p{
         display: none;
     }
+    header {
+        font-size: 3vh;
+    }
 }
 
 .header {
@@ -160,7 +163,7 @@ nav {
     border-radius: 5px;
     color: #9b59b6;
     border: thick double #9b59b6;
-    width: 800px;
+    width: 80vw;
 }
 #actu:hover{
     border: none;

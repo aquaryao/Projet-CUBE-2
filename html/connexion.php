@@ -24,6 +24,7 @@
         <label for="mdp">Mot de passe : </label>
         <input type="password" name="mdp">
         <button>Se connecter</button>
+        <a href="inscription.php"><h4>Inscrivez-vous ici</h4></a>
     </form>
     <script src="../js/menu.js"></script>
 </body>
