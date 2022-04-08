@@ -20,6 +20,12 @@ function DeleteFils($numfils){
     $sub_query->execute();
     $res_sub = $sub_query->fetch();
     $sub_query->closeCursor();
+
+    $sqlencore = $db->prepare("DELETE FROM `messages` WHERE `messages`.`idfils` = :res_sub");
+    $sqlencore->BindParam(':res_sub',$res_sub['idfils'], PDO::PARAM_INT);
+    $sqlencore->execute();
+    $resultat = $sqlencore->fetchAll();
+    $sqlencore->closeCursor();
     
     $sql = $db->prepare("DELETE FROM `fils` WHERE `fils`.`idfils` = :res_sub");
     $sql->BindParam(':res_sub',$res_sub['idfils'], PDO::PARAM_INT);
@@ -48,38 +54,12 @@ function DeleteMessage($nummess){
 
 
 
-    function DeleteMessage($nummess){
-        $db = connect();
-        
-        $fils = $_SESSION['fils'];
-        $sub_query = $db->prepare("SELECT `idmess` FROM `messages` WHERE `idfils` = :idfils ORDER BY `idmess` LIMIT :nummess,1");
-        $sub_query->BindParam(':idfils',$fils, PDO::PARAM_INT);
-        $nummess = intval($nummess);
-        $sub_query->BindParam(':nummess',$nummess, PDO::PARAM_INT);
-        $sub_query->execute();
-        $res_sub = $sub_query->fetch();
-        $sub_query->closeCursor();
-
-        $sql = $db->prepare("UPDATE `messages` SET `message` = 'Message supprimé par un administateur' WHERE `messages`.`idmess` = :res_sub");
-        $sql->BindParam(':res_sub',$res_sub['idmess'], PDO::PARAM_INT);
-        $sql->execute();
-        $resultat = $sql->fetchAll();
-        $sql->closeCursor();
-    }
-
 
 function UpdateFilsInfos($fils){
     $db = connect();
-    $sub_query = $db->prepare("SELECT `idfils` FROM `fils` ORDER BY `idfils` LIMIT :fils,1");
-    $fils = intval($fils);
-    --$fils;
-    $sub_query->BindParam(':fils',$fils, PDO::PARAM_INT);
-    $sub_query->execute();
-    $res_sub = $sub_query->fetch();
-    $sub_query->closeCursor();
     
     $sql = $db->prepare("UPDATE `fils` SET `nombrmes` = (SELECT COUNT(`idmess`) FROM `messages` WHERE `idfils` = :idfils), `datelastmes` = NOW() WHERE `idfils` = :idfils");
-    $sql->BindParam(':idfils',$res_sub['idfils'], PDO::PARAM_INT);
+    $sql->BindParam(':idfils',$fils, PDO::PARAM_INT);
     $sql->execute();
     $resultat = $sql->fetchAll();
     $sql->closeCursor();
@@ -113,14 +93,6 @@ function InsertFils($titre){
 
 
 
-    function UpdateFilsInfos($fils){
-        $db = connect();
-        $sql = $db->prepare("UPDATE `fils` SET `nombrmes` = (SELECT COUNT(idfils) FROM `messages` WHERE `idfils` = :idfils), `datelastmes` = NOW()");
-        $sql->BindParam(':idfils',$fils, PDO::PARAM_INT);
-        $sql->execute();
-        $resultat = $sql->fetchAll();
-        $sql->closeCursor();
-    }
 
 
 function SelectDiscussion(){

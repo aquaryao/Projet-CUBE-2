@@ -11,11 +11,11 @@
     <?php require_once("../php/menu.php")?>
 
     <main>
-        <section id="carroussel">
+        <!-- <section id="carroussel">
             <div class="img-cote" id="gauche"></div>
             <img class="img-centre" src="../img/unknown.png" alt="Une image">
             <div class="img-cote" id="droite"></div>
-        </section>
+        </section> -->
         <section id="liste-jeux">
             <h2>Tous nos jeux</h2>
             <div id="liste">
@@ -106,7 +106,7 @@
     <main>
         <?php require_once("../php/footer.php")?>
             <script src="../js/menu.js"></script>
-            <script src="../js/carroussel.js"></script>
+            <!-- <script src="../js/carroussel.js"></script> -->
 </body>
 </html>
 
